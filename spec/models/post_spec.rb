@@ -22,4 +22,10 @@ RSpec.describe Post, type: :model do
       expect(@post).to_not be_valid
     end
   end
+
+  describe 'custom name method' do
+    it 'has a full name method that combines first and last name' do
+      expect(@user.full_name).to eq("SNOW, JOHN")
+    end
+  end
 end
